@@ -1,0 +1,2155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Skyline Roleplay - Sri Lanka's Premier GTA Roleplay Server</title>
+    <meta name="title" content="Skyline Roleplay - Sri Lanka's Premier GTA Roleplay Server">
+    <meta name="description" content="Join Skyline Roleplay, Sri Lanka's most immersive GTA V roleplay experience. Apply for Police, Medical, or Crew roles today. Custom framework, dedicated staff, and a thriving community await.">
+    <meta name="keywords" content="Skyline Roleplay, GTA Roleplay Sri Lanka, GTA V RP, FiveM Sri Lanka, Police Roleplay, Medical Roleplay, Crew Application, Sri Lanka RP Server">
+    
+    <!-- Open Graph / Facebook Meta Tags (for Discord & Social Media) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skylineroleplay.site/">
+    <meta property="og:title" content="Skyline Roleplay - Sri Lanka's Premier GTA Roleplay Server">
+    <meta property="og:description" content="Join Sri Lanka's most immersive GTA V roleplay experience. Apply for Police, Medical, or Crew roles today.">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=1200&height=1200">
+    
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://skylineroleplay.site/">
+    <meta property="twitter:title" content="Skyline Roleplay - Sri Lanka's Premier GTA Roleplay Server">
+    <meta property="twitter:description" content="Join Sri Lanka's most immersive GTA V roleplay experience. Apply for Police, Medical, or Crew roles today.">
+    <meta property="twitter:image" content="https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=1200&height=1200">
+
+    <!-- Website Favicon -->
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736">
+    
+    <!-- Preconnect to CDN domains for better performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Config for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'slide-left': 'slideLeft 0.6s ease-out forwards',
+                        'slide-right': 'slideRight 0.6s ease-out forwards',
+                        'zoom-in': 'zoomIn 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translate3d(0, 40px, 0)' },
+                            '100%': { opacity: '1', transform: 'translate3d(0, 0, 0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideRight: {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        zoomIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    },
+                    screens: {
+                        'xs': '475px',
+                        '3xl': '1920px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background-color: black;
+            color: white;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .page-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; 
+        }
+        
+        button, .clickable, input[type="submit"] {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        input, textarea, select {
+            font-size: 16px !important;
+        }
+        
+        .mobile-padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .hero-height {
+            min-height: 100vh;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-height {
+                min-height: 90vh;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            
+            .mobile-stack {
+                flex-direction: column;
+            }
+            
+            .mobile-center {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .mobile-full {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .mobile-mb-2 {
+                margin-bottom: 0.5rem;
+            }
+            
+            .mobile-text-center {
+                text-align: center;
+            }
+            
+            .mobile-px-4 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        
+        .overflow-fix {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .rule-card {
+            height: 250px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 1024px) {
+            .rule-card {
+                height: 300px;
+            }
+        }
+        
+        body { 
+            background-color: #050505; 
+            color: #ffffff; 
+        }
+        
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        
+        .glass-nav { 
+            background: rgba(5, 5, 5, 0.7); 
+            backdrop-filter: blur(20px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        
+        .text-main-gradient-1 { 
+            background: linear-gradient(to right, #3b82f6, #6366f1); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        
+        .text-main-gradient-2 { 
+            color: #3b82f6; 
+        }
+        
+        .text-main-gradient-3 { 
+            color: #6366f1; 
+        }
+        
+        .text-blue-gradient { 
+            background: linear-gradient(to right, #3b82f6, #6366f1); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        
+        .code-snippet { 
+            font-family: 'Fira Code', monospace; 
+            background: #0f0f0f; 
+            border-left: 3px solid #3b82f6; 
+        }
+        
+        .bg-pattern-dark {
+            background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            transform: scale(0.9);
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3)); 
+        }
+        
+        .hero-tablet-frame {
+            background: #000;
+            border: 10px solid #111;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16 / 9;
+        }
+
+        .hero-video-element {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-animate.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-animate-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-animate-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-animate-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-animate-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-animate-zoom {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-animate-zoom.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+        
+        .rules-categories {
+            background-color: #0a0a0a;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem 0;
+            position: sticky;
+            top: 5rem;
+            z-index: 40;
+            margin-top: -1rem;
+        }
+
+        .categories-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            color: #9ca3af;
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tab-btn:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: #ffffff;
+            border-color: #3b82f6;
+            background-color: #3b82f6;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        .rules-content {
+            padding: 3rem 1rem;
+            background-color: #050505;
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(to right, #6366f1, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .rule-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.75rem;
+            background-color: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+        }
+
+        .rule-item.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .rule-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .rule-number {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0a0a0a;
+            background-color: #3b82f6;
+        }
+
+        .rule-text h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .rule-text p {
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        .rule-enforcement {
+            padding: 2rem 1rem 4rem;
+            max-width: 896px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .enforcement-content p {
+            color: #9ca3af;
+            margin-top: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            ring-width: 2px;
+            ring-color: #3b82f6;
+        }
+        
+        .sponsorship-card {
+            transition: all 0.3s ease;
+        }
+        
+        .sponsorship-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+        }
+        
+        #mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        footer a {
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #3b82f6;
+        }
+        
+        .counter {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .counter.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Form Section Styling */
+        .form-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Logo Preview */
+        .logo-preview {
+            width: 150px;
+            height: 150px;
+            border: 2px dashed #4b5563;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            background-color: #1f2937;
+        }
+        
+        .logo-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Success/Error Messages */
+        .message {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 1000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            animation: slideInRight 0.3s ease-out, fadeOut 0.3s ease-out 2.7s forwards;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-width: 350px;
+        }
+        
+        .success-message {
+            background-color: #10b981;
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .error-message {
+            background-color: #ef4444;
+            color: white;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        
+        /* Staff Team Styling */
+        .staff-card {
+            transition: all 0.3s ease;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .staff-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .staff-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid;
+            margin: 0 auto;
+        }
+        
+        .owner-avatar {
+            border-color: #f59e0b;
+        }
+        
+        .dev-avatar {
+            border-color: #10b981;
+        }
+        
+        .role-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .owner-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+        
+        .main-dev-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .dev-badge {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+        }
+        
+        .discord-handle {
+            background: rgba(88, 101, 242, 0.1);
+            border: 1px solid rgba(88, 101, 242, 0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #8b9dff;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .discord-handle i {
+            color: #5865f2;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* File Upload Styling */
+        .file-upload-container {
+            border: 2px dashed #4b5563;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            background-color: rgba(31, 41, 55, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .file-upload-container:hover {
+            border-color: #3b82f6;
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+        
+        .file-upload-container.dragover {
+            border-color: #10b981;
+            background-color: rgba(16, 185, 129, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white overflow-fix">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300 scroll-animate" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer flex items-center gap-2" onclick="navigateTo('home')">
+                    <img src="https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=680&height=680" alt="SKYLINE Logo" class="w-10 h-10 md:w-12 md:h-12 object-cover scroll-animate-zoom">
+                    <span class="text-white font-bold text-lg md:text-xl tracking-wider scroll-animate-left">SKYLINE<span class="text-blue-400">RP</span></span>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-4 xl:space-x-6">
+                        <button onclick="navigateTo('home')" class="nav-link text-gray-300 hover:text-white px-2 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors scroll-animate delay-100" data-page="home">Home</button>
+                        <button onclick="navigateTo('applications')" class="nav-link text-gray-300 hover:text-white px-2 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors scroll-animate delay-200" data-page="applications">Applications</button>
+                        <button onclick="navigateTo('crew')" class="nav-link text-gray-300 hover:text-white px-2 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors scroll-animate delay-300" data-page="crew">Crew</button>
+                        <button onclick="navigateTo('staff')" class="nav-link text-gray-300 hover:text-white px-2 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors scroll-animate delay-400" data-page="staff">Staff Team</button>
+                        <button onclick="navigateTo('serverrules')" class="nav-link text-gray-300 hover:text-white px-2 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors scroll-animate delay-500" data-page="serverrules">Server Rules</button>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+<a href="https://discord.gg/fr2uE5eetR">
+  <button class="bg-white text-black hover:bg-gray-200 px-5 py-2 md:px-6 md:py-2 rounded-sm font-bold text-sm uppercase tracking-wider transition-all transform hover:scale-105 shadow-lg shadow-white/10 scroll-animate-zoom">
+    DISCORD
+  </button>
+</a>
+
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none p-2" aria-label="Toggle menu">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-b border-gray-800 absolute w-full left-0 top-16 md:top-20 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-0 sm:px-3">
+                <button onclick="navigateTo('home')" class="text-gray-300 hover:text-white block px-4 py-4 rounded-md text-base font-medium w-full text-left uppercase border-b border-gray-900">Home</button>
+                <button onclick="navigateTo('applications')" class="text-gray-300 hover:text-white block px-4 py-4 rounded-md text-base font-medium w-full text-left uppercase border-b border-gray-900">Applications</button>
+                <button onclick="navigateTo('crew')" class="text-gray-300 hover:text-white block px-4 py-4 rounded-md text-base font-medium w-full text-left uppercase border-b border-gray-900">Crew</button>
+                <button onclick="navigateTo('staff')" class="text-gray-300 hover:text-white block px-4 py-4 rounded-md text-base font-medium w-full text-left uppercase border-b border-gray-900">Staff Team</button>
+                <button onclick="navigateTo('serverrules')" class="text-gray-300 hover:text-white block px-4 py-4 rounded-md text-base font-medium w-full text-left uppercase border-b border-gray-900">Server Rules</button>
+<a href="https://discord.gg/fr2uE5eetR">
+  <button class="text-blue-400 hover:text-blue-300 block px-4 py-4 rounded-md text-base font-bold w-full text-left uppercase bg-blue-900/20">
+    DISCORD
+  </button>
+</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="overflow-fix">
+
+        <!-- ================= HOME PAGE ================= -->
+        <div id="home" class="page-section active">
+            <!-- Hero Section -->
+            <div class="relative hero-height w-full overflow-hidden flex items-center">
+                <!-- Background Image & Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-black/60 to-black z-0"></div>
+                <!-- Background Image -->
+                <div class="absolute inset-0 bg-[url('https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1156100/f945b5150424428bc2bee5c592bb2201a6ac0957.png')] bg-cover bg-center opacity-30 z-[-1] animate-pulse-slow"></div>
+                
+                <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-20">
+                    <div class="max-w-3xl mx-auto md:mx-0 animate-fade-in-up mobile-center">
+                        <p class="text-blue-400 font-bold tracking-widest text-xs md:text-sm mb-2 uppercase text-center md:text-left scroll-animate">Exclusive</p>
+                        <h1 class="text-3xl xs:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight text-center md:text-left scroll-animate delay-100">
+                            ROLEPLAY EXPERIENCE<br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 text-2xl xs:text-3xl md:text-4xl lg:text-6xl scroll-animate delay-200">IN SRI LANKA</span>
+                        </h1>
+                        <!-- Stars -->
+                        <div class="flex gap-2 mb-6 md:mb-8 justify-center md:justify-start scroll-animate delay-300">
+                            <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        
+                        <div class="text-center md:text-left scroll-animate delay-400">
+                            <button onclick="navigateTo('applications')" class="bg-white text-black px-6 py-3 md:px-10 md:py-4 rounded font-bold uppercase tracking-widest hover:bg-blue-50 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(255,255,255,0.3)] w-full md:w-auto">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Visa CTA Section -->
+            <div class="relative min-h-[70vh] md:h-screen w-full bg-cover bg-center bg-no-repeat flex items-center" style="background-image: url('https://media.discordapp.net/attachments/1442517496275009597/1454134948511482112/staff.jpg?ex=694ffc34&is=694eaab4&hm=4014c3faa5ca015dcecdababa06b1ef6033a26369cf705c3c3cb7f48e5c2ae3e&=&format=webp&width=1618&height=736');">
+                <!-- Gradient Overlay for better text readability -->
+                <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+                <div class="max-w-7xl mx-auto px-4 flex flex-col items-center md:items-end relative z-10 w-full py-10 md:py-0">
+                    <!-- Text Content -->
+                    <div class="text-center md:text-right mobile-px-4 scroll-animate-right">
+                        <h2 class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">OUR DEDICATED STAFF</h2>
+                        <p class="text-gray-300 mb-6 md:mb-8 max-w-md mx-auto md:ml-auto leading-relaxed text-sm md:text-base scroll-animate delay-200">
+                            Dedicated staff: reliable, hardworking, loyal, proactive team player delivering quality results with strong responsibility and commitment.
+                        </p>
+                        <button onclick="navigateTo('staff')" class="bg-white text-black px-6 py-3 md:px-8 md:py-3 rounded font-bold uppercase hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all w-full md:w-auto scroll-animate delay-300">
+                            View Our Staff
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Applications CTA Section -->
+            <div class="relative min-h-[70vh] md:h-screen w-full bg-cover bg-center bg-no-repeat flex items-center" style="background-image: url('https://media.discordapp.net/attachments/1442517496275009597/1454138763465982033/Untitled_Project.jpg?ex=694fffc1&is=694eae41&hm=c6f29a0663ff44e8bbc6825ddfdcc0cf39059e98b847993bec3e2472b153a07a&=&format=webp&width=1228&height=558');">
+                <!-- Gradient Overlay for better text readability -->
+                <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+                <div class="max-w-7xl mx-auto px-4 flex flex-col items-start relative z-10 w-full py-10 md:py-0">
+                    <!-- Text Content -->
+                    <div class="text-left mobile-px-4 scroll-animate-left">
+                        <h2 class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">JOB APPLICATIONS</h2>
+                        <p class="text-gray-300 mb-6 md:mb-8 max-w-md leading-relaxed text-sm md:text-base scroll-animate delay-200">
+                            Ready to start your career? Apply today for the Police Department (PD) or Medical Department (MD) and become part of the city's most vital services. Serve, protect, and save lives alongside thousands of citizens.
+                        </p>
+                        <button onclick="navigateTo('applications')" class="bg-white text-black px-6 py-3 md:px-8 md:py-3 rounded font-bold uppercase hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all w-full md:w-auto scroll-animate delay-300">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= STAFF TEAM PAGE ================= -->
+        <div id="staff" class="page-section">
+            <div class="min-h-screen bg-black pt-24 md:pt-32 pb-12 md:pb-20 relative">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-black to-black"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 relative z-10">
+                    <!-- Page Header -->
+                    <div class="text-center mb-12 md:mb-16 scroll-animate">
+                        <h2 class="text-blue-500 font-bold tracking-widest text-xs md:text-sm mb-2 uppercase">Meet Our Team</h2>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 scroll-animate delay-100">Skyline Staff Team</h1>
+                        <p class="text-gray-500 max-w-2xl mx-auto text-sm md:text-base scroll-animate delay-200">
+                            Our dedicated team works tirelessly to ensure the best roleplay experience for our community. 
+                            Meet the talented individuals who make SKYLINE Roleplay possible.
+                        </p>
+                    </div>
+
+                    <!-- Staff Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+                        <!-- Owner: Ashen FDO -->
+                        <div class="staff-card p-6 md:p-8 relative scroll-animate-zoom">
+                            <div class="role-badge owner-badge">Owner</div>
+                            <div class="text-center">
+                                <div class="mb-6">
+                                    <img src="https://cdn.discordapp.com/avatars/964020679634743356/3974c82f12359c988b6937e7a87fa30b.png?size=1024" 
+                                         alt="Ashen FDO" 
+                                         class="staff-avatar owner-avatar shadow-lg shadow-yellow-500/20">
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Ashen FDO</h3>
+                                <p class="text-gray-400 text-sm mb-4">Founder & Server Owner</p>
+                                <div class="discord-handle mb-6">
+                                    <i class="fab fa-discord"></i>
+                                    <span>ashen2003</span>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Visionary leader and founder of SKYLINE Roleplay. Oversees all operations, ensures community standards, 
+                                    and drives the server's development forward with innovative ideas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Main Dev: KG Scripts -->
+                        <div class="staff-card p-6 md:p-8 relative scroll-animate-zoom delay-100">
+                            <div class="role-badge main-dev-badge">Main Developer</div>
+                            <div class="text-center">
+                                <div class="mb-6">
+                                    <img src="https://cdn.discordapp.com/avatars/1132999680775684137/92ea646a171f4a69886da9e76f97289b.png?size=1024" 
+                                         alt="KG Scripts" 
+                                         class="staff-avatar dev-avatar shadow-lg shadow-green-500/20">
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-2">KG Scripts</h3>
+                                <p class="text-gray-400 text-sm mb-4">Head Developer</p>
+                                <div class="discord-handle mb-6">
+                                    <i class="fab fa-discord"></i>
+                                    <span>anonymousmax.</span>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Primary architect behind SKYLINE's custom framework. Handles core system development, 
+                                    optimization, and implementation of advanced features that power our roleplay experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Dev: Shelby -->
+                        <div class="staff-card p-6 md:p-8 relative scroll-animate-zoom delay-200">
+                            <div class="role-badge dev-badge">Developer</div>
+                            <div class="text-center">
+                                <div class="mb-6">
+                                    <img src="https://cdn.discordapp.com/avatars/1442122943030362125/e7f6dd28476ddabddd2e44396a421d6f.png?size=1024" 
+                                         alt="Shelby" 
+                                         class="staff-avatar dev-avatar shadow-lg shadow-blue-500/20">
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Shelby</h3>
+                                <p class="text-gray-400 text-sm mb-4">Scripter</p>
+                                <div class="discord-handle mb-6">
+                                    <i class="fab fa-discord"></i>
+                                    <span>shelby05165</span>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Specializes in backend systems, server optimization, and custom script development. 
+                                    Ensures smooth server performance and implements complex roleplay mechanics.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Dev: Sanuka -->
+                        <div class="staff-card p-6 md:p-8 relative scroll-animate-zoom delay-300">
+                            <div class="role-badge dev-badge">Developer</div>
+                            <div class="text-center">
+                                <div class="mb-6">
+                                    <img src="https://cdn.discordapp.com/avatars/1294484345150767114/a_75701ec30b0eee4573e84c11c2d1103c.gif?size=1024" 
+                                         alt="Sanuka" 
+                                         class="staff-avatar dev-avatar shadow-lg shadow-blue-500/20">
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Sanuka</h3>
+                                <p class="text-gray-400 text-sm mb-4">Scripter</p>
+                                <div class="discord-handle mb-6">
+                                    <i class="fab fa-discord"></i>
+                                    <span>week888</span>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Focuses on user interface design and client-side development. Creates intuitive systems 
+                                    and ensures players have a seamless and engaging roleplay experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Dev: Ajitha -->
+                        <div class="staff-card p-6 md:p-8 relative scroll-animate-zoom delay-400">
+                            <div class="role-badge dev-badge">Developer</div>
+                            <div class="text-center">
+                                <div class="mb-6">
+                                    <img src="https://cdn.discordapp.com/avatars/1174722744173211658/0b8a7ff3a8b2147eea6b5b85841bff79.png?size=1024" 
+                                         alt="Ajitha" 
+                                         class="staff-avatar dev-avatar shadow-lg shadow-blue-500/20">
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Ajitha</h3>
+                                <p class="text-gray-400 text-sm mb-4">Scripter</p>
+                                <div class="discord-handle mb-6">
+                                    <i class="fab fa-discord"></i>
+                                    <span>ajitha0414_23988</span>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Develops custom plugins, roleplay systems, and content that enhances gameplay. 
+                                    Works on creating immersive experiences and expanding server capabilities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CREW PAGE WITH LOGO UPLOAD ================= -->
+        <div id="crew" class="page-section">
+            <div class="min-h-screen bg-black pt-24 md:pt-32 pb-12 md:pb-20 relative">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        
+                <div class="max-w-3xl mx-auto px-4 relative z-10 animate-fade-in-up">
+                    <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-white mb-2 scroll-animate">Crew Registration Application</h1>
+                    <p class="text-center text-blue-400 font-bold mb-8 md:mb-12 text-sm md:text-base scroll-animate delay-100">SKYLINEROLEPLAY 2025</p>
+        
+                    <div class="bg-black/40 backdrop-blur-md p-4 md:p-6 lg:p-8 rounded-xl border border-white/10 scroll-animate-zoom">
+                        <form id="crewApplicationForm" method="POST">
+                            <!-- Logo Upload Section -->
+                            <div class="mb-6 md:mb-8 scroll-animate delay-100">
+                                <label class="block text-white text-sm font-bold mb-4 text-center">Crew Logo (Optional)</label>
+                                <div class="logo-preview" id="logoPreview">
+                                    <div class="text-gray-500 text-center">
+                                        <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <p class="text-xs">Logo Preview</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <input type="file" name="crew_logo" id="crew_logo" accept="image/*" class="hidden" onchange="previewLogo(event)">
+                                    <label for="crew_logo" class="inline-block bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg cursor-pointer transition-colors text-sm">
+                                        Choose Logo (Max 5MB)
+                                    </label>
+                                    <p class="text-gray-400 text-xs mt-2">Supported: JPG, PNG, GIF, WEBP</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4 md:mb-6 scroll-animate delay-200">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Crew Name *</label>
+                                <input type="text" name="crew_name" placeholder="Your Crew Name" class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-[0_0_15px_rgba(255,255,255,0.1)] text-sm md:text-base" required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-300">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Crew Leader Discord Name *</label>
+                                <input type="text" name="leader_discord" placeholder="(Discord User Name or User ID)" class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-[0_0_15px_rgba(255,255,255,0.1)] text-sm md:text-base" required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-400">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Crew Member Names *</label>
+                                <textarea name="member_names" placeholder="(1) Jack Zero\n(2) Chaminda Perera\n(3) Jeo Fernando" rows="4" class="w-full bg-gray-100 text-gray-900 border-0 rounded-2xl py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-[0_0_15px_rgba(255,255,255,0.1)] text-sm md:text-base" required></textarea>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-500">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Crew Type *</label>
+                                <input type="text" name="crew_type" placeholder="(Gang, Motorcycle Club, Business, etc.)" class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-[0_0_15px_rgba(255,255,255,0.1)] text-sm md:text-base" required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-600">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Crew Story/Background *</label>
+                                <textarea name="crew_story" placeholder="Tell us your crew's history and what makes you unique..." rows="4" class="w-full bg-gray-100 text-gray-900 border-0 rounded-2xl py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-[0_0_15px_rgba(255,255,255,0.1)] text-sm md:text-base" required></textarea>
+                            </div>
+                            
+                            <div class="mb-6 md:mb-8 scroll-animate delay-700">
+                                <label class="block text-white text-sm font-bold mb-4">
+                                    Do you agree to follow the server rules and maintain high-quality roleplay?
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="agree" name="agrees_rules" value="1" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500" required>
+                                    <label for="agree" class="ml-2 text-sm font-medium text-gray-300">Yes, I agree</label>
+                                </div>
+                            </div>
+        
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-all uppercase tracking-wider text-sm md:text-base scroll-animate delay-800">
+                                Submit Crew Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= RULES PAGE ================= -->
+        <div id="serverrules" class="page-section">
+            <div class="min-h-screen bg-black pt-24 md:pt-32 pb-12 md:pb-20 relative overflow-hidden">
+                <!-- Rules Categories -->
+                <section class="rules-categories scroll-animate">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="categories-tabs">
+                            <button class="tab-btn active" data-tab="general">General Rules</button>
+                            <button class="tab-btn" data-tab="roleplay">Roleplay Guidelines</button>
+                            <button class="tab-btn" data-tab="police">Police & Criminal</button>
+                            <button class="tab-btn" data-tab="vehicles">Vehicles & Properties</button>
+                            <button class="tab-btn" data-tab="communication">Communication</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rules Content -->
+                <section class="rules-content">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <!-- General Rules Tab -->
+                        <div class="tab-content active" id="general">
+                            <h2 class="section-title scroll-animate">General Server Rules</h2>
+                            
+                            <div class="rule-item">
+                                <div class="rule-number">1</div>
+                                <div class="rule-text">
+                                    <h3>Respect All Players</h3>
+                                    <p>Treat all players with respect regardless of their role, experience level, or background. Discrimination, harassment, or bullying of any kind will not be tolerated.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">2</div>
+                                <div class="rule-text">
+                                    <h3>No Cheating or Exploiting</h3>
+                                    <p>Use of cheats, hacks, exploits, or any third-party tools to gain an unfair advantage will result in a permanent ban without warning.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">3</div>
+                                <div class="rule-text">
+                                    <h3>Staff Decisions Are Final</h3>
+                                    <p>Respect our decisions even when harsh. If you disagree with a decision, you may appeal through the proper channels on our Discord.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">4</div>
+                                <div class="rule-text">
+                                    <h3>One Character Per Person</h3>
+                                    <p>You may create multiple characters, but only one character can be active at a time. Character switching to avoid RP consequences is prohibited.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">5</div>
+                                <div class="rule-text">
+                                    <h3>Appropriate Character Names</h3>
+                                    <p>Character names must be realistic and appropriate. No offensive, celebrity, or meme names are allowed.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">6</div>
+                                <div class="rule-text">
+                                    <h3>No Combat Logging</h3>
+                                    <p>Disconnecting to avoid roleplay situations, especially during combat or police interactions, is prohibited.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">7</div>
+                                <div class="rule-text">
+                                    <h3>Report Bugs</h3>
+                                    <p>If you discover a bug or exploit, report it to staff immediately. Abuse of bugs for personal gain is prohibited.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Roleplay Guidelines Tab -->
+                        <div class="tab-content" id="roleplay">
+                            <h2 class="section-title scroll-animate">Roleplay Guidelines</h2>
+                            
+                            <div class="rule-item">
+                                <div class="rule-number">1</div>
+                                <div class="rule-text">
+                                    <h3>Value Your Life</h3>
+                                    <p>Always act as if your character values their life. Don't make unrealistic decisions that put your character in unnecessary danger.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">2</div>
+                                <div class="rule-text">
+                                    <h3>No Powergaming</h3>
+                                    <p>Don't force actions on other players or create scenarios where others have no choice or chance to respond.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">3</div>
+                                <div class="rule-text">
+                                    <h3>No Metagaming</h3>
+                                    <p>Using information your character wouldn't know in-game (from Discord, streams, etc.) is strictly prohibited.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">4</div>
+                                <div class="rule-text">
+                                    <h3>Realistic Roleplay</h3>
+                                    <p>Keep your actions realistic and consistent with your character's background and abilities.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">5</div>
+                                <div class="rule-text">
+                                    <h3>No Breaking Character</h3>
+                                    <p>Stay in character at all times during roleplay interactions. Use appropriate channels for OOC communication.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Police & Criminal Tab -->
+                        <div class="tab-content" id="police">
+                            <h2 class="section-title scroll-animate">Police & Criminal Rules</h2>
+                            
+                            <div class="rule-item">
+                                <div class="rule-number">1</div>
+                                <div class="rule-text">
+                                    <h3>Police Response</h3>
+                                    <p>Police must respond appropriately to the level of crime. Not every situation requires maximum force.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">2</div>
+                                <div class="rule-text">
+                                    <h3>Criminal Activity</h3>
+                                    <p>All criminal activities must have proper roleplay and planning. Random violence without roleplay context is prohibited.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">3</div>
+                                <div class="rule-text">
+                                    <h3>Robbery Cooldowns</h3>
+                                    <p>Respect the cooldown periods between robberies and other major criminal activities.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">4</div>
+                                <div class="rule-text">
+                                    <h3>Gang Activity</h3>
+                                    <p>Gang wars and territory disputes must be approved by staff and have proper roleplay context.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vehicles & Properties Tab -->
+                        <div class="tab-content" id="vehicles">
+                            <h2 class="section-title scroll-animate">Vehicles & Properties Rules</h2>
+                            
+                            <div class="rule-item">
+                                <div class="rule-number">1</div>
+                                <div class="rule-text">
+                                    <h3>Realistic Driving</h3>
+                                    <p>Drive realistically at all times. No excessive speeding in city areas or reckless driving that endangers others.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">2</div>
+                                <div class="rule-text">
+                                    <h3>Vehicle Ownership</h3>
+                                    <p>Only drive vehicles your character owns or has permission to use. Stealing vehicles without proper roleplay is prohibited.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">3</div>
+                                <div class="rule-text">
+                                    <h3>Property Rules</h3>
+                                    <p>Respect property boundaries and ownership. Entering private property without permission requires proper roleplay.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Communication Tab -->
+                        <div class="tab-content" id="communication">
+                            <h2 class="section-title scroll-animate">Communication Rules</h2>
+                            
+                            <div class="rule-item">
+                                <div class="rule-number">1</div>
+                                <div class="rule-text">
+                                    <h3>Clear Communication</h3>
+                                    <p>Communicate clearly and respectfully with other players. Avoid using excessive slang or unclear language.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">2</div>
+                                <div class="rule-text">
+                                    <h3>No OOC in IC</h3>
+                                    <p>Keep out-of-character communication in appropriate channels. Don't break character during roleplay situations.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-item">
+                                <div class="rule-number">3</div>
+                                <div class="rule-text">
+                                    <h3>Respect Voice Chat</h3>
+                                    <p>Keep voice chat clean and roleplay-focused. Avoid background noise and unrelated conversations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Enforcement Notice -->
+                <section class="rule-enforcement">
+                    <div class="enforcement-content">
+                        <h2 class="text-2xl font-bold text-white mb-4">⚠️ Rule Enforcement</h2>
+                        <p>All rules are strictly enforced by our moderation team. Violations may result in warnings, temporary suspensions, or permanent bans depending on severity. We reserve the right to update these rules at any time.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ================= APPLICATIONS PAGE ================= -->
+        <div id="applications" class="page-section relative min-h-screen bg-black pt-24 md:pt-32 pb-12 md:pb-20">
+            
+            <!-- Page Background Image Layer -->
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto px-4">
+                <!-- ================= POLICE FORM ================= -->
+                <div class="mb-16 md:mb-24">
+                    <div class="flex flex-col items-center mb-8 md:mb-10">
+                        <div class="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-4 border-2 border-blue-500 shadow-lg shadow-blue-500/20 bg-cover bg-center scroll-animate-zoom"
+                            style="background-image: url('https://media.discordapp.net/attachments/1442517496275009597/1454130914362654792/Gray_Cute_Patrol_Car_illustration_Logo.png?ex=694ff872&is=694ea6f2&hm=387ad5ace38a689e0919e35c0b01fc01e8f1e1f40d7d587c5fb704588c4f2031&=&format=webp&quality=lossless&width=682&height=682');">
+                        </div>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white text-center scroll-animate">
+                            SKYLINE POLICE DEPARTMENT<br/>APPLICATION
+                        </h2>
+                    </div>
+
+                    <!-- Police Form Container with 2k background -->
+                    <div class="relative p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl border border-blue-500/30 shadow-[0_0_30px_rgba(30,58,138,0.15)] overflow-hidden scroll-animate-zoom delay-100">
+                        <!-- Dark overlay for readability -->
+                        <div class="absolute inset-0 bg-blue-900/60 rounded-xl md:rounded-2xl"></div>
+
+                        <form id="police-form" method="POST" action="javascript:void(0);" class="relative z-10">
+                            <div class="mb-4 md:mb-6 scroll-animate delay-200">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Character Full Name *</label>
+                                <input type="text" name="full_name" placeholder="Ex: Kamal Perera"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                                    required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-300">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Character Gender *</label>
+                                <input type="text" name="gender" placeholder="Ex: Male / Female"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                                    required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-400">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Character Age *</label>
+                                <input type="number" name="age" placeholder="Ex: 24"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                                    required min="18" max="60">
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-500">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Discord User ID *</label>
+                                <input type="text" name="discord_id" placeholder="Discord ID"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                                    required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-600">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Why join Police Force? *</label>
+                                <textarea name="why_join" placeholder="Enter your answer" rows="3"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-2xl py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+                                    required></textarea>
+                            </div>
+                            <div class="text-center mt-6 md:mt-8 scroll-animate delay-700">
+                                <button type="submit"
+                                    class="bg-white text-black font-bold px-6 py-2 md:px-10 md:py-2 rounded-full hover:bg-gray-200 transition-colors w-full md:w-auto text-sm md:text-base">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ================= MEDICAL FORM ================= -->
+                <div>
+                    <div class="flex flex-col items-center mb-8 md:mb-10">
+                        <div class="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-4 border-2 border-red-500 shadow-lg shadow-red-500/20 bg-cover bg-center scroll-animate-zoom"
+                            style="background-image: url('https://media.discordapp.net/attachments/1442517496275009597/1454153021113237666/Gray_Cute_Patrol_Car_illustration_Logo.png?ex=69500d09&is=694ebb89&hm=e78c236758aade1c649b38db03befa8115f35d814b8022bfabd8b1fc756372dc&=&format=webp&quality=lossless&width=850&height=850');">
+                        </div>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white text-center scroll-animate">
+                            SKYLINE MEDICAL DEPARTMENT<br/>APPLICATION
+                        </h2>
+                    </div>
+
+                    <!-- Medical Form Container with 2k background -->
+                    <div class="relative p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl border border-red-500/30 shadow-[0_0_30px_rgba(153,27,27,0.15)] overflow-hidden scroll-animate-zoom delay-100">
+                        <!-- Dark overlay for readability -->
+                        <div class="absolute inset-0 bg-red-900/60 rounded-xl md:rounded-2xl"></div>
+
+                        <form id="medical-form" method="POST" action="javascript:void(0);" class="relative z-10">
+                            <div class="mb-4 md:mb-6 scroll-animate delay-200">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Character Full Name *</label>
+                                <input type="text" name="full_name" placeholder="Ex: Kamal Perera"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 text-sm md:text-base"
+                                    required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-300">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Character Age *</label>
+                                <input type="number" name="age" placeholder="Ex: 24"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 text-sm md:text-base"
+                                    required min="18" max="60">
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-400">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Discord User ID *</label>
+                                <input type="text" name="discord_id" placeholder="Discord ID"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 text-sm md:text-base"
+                                    required>
+                            </div>
+                            <div class="mb-4 md:mb-6 scroll-animate delay-500">
+                                <label class="block text-white text-sm font-bold mb-2 ml-1">Preferred Division *</label>
+                                <input type="text" name="preferred_division" placeholder="Ex: Doctor Division"
+                                    class="w-full bg-gray-100 text-gray-900 border-0 rounded-full py-3 px-4 md:px-6 focus:outline-none focus:ring-2 focus:ring-red-500 text-sm md:text-base"
+                                    required>
+                            </div>
+                            <div class="text-center mt-6 md:mt-8 scroll-animate delay-600">
+                                <button type="submit"
+                                    class="bg-white text-black font-bold px-6 py-2 md:px-10 md:py-2 rounded-full hover:bg-gray-200 transition-colors w-full md:w-auto text-sm md:text-base">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white pt-12 pb-6 md:pt-16 md:pb-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Experience -->
+                <div class="text-center md:text-left scroll-animate-left">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Experience</h3>
+                    <p class="text-gray-400 text-xs md:text-sm mb-6">
+                        Join our premium roleplay servers for fun. Immersive storytelling, dedicated staff, and a custom framework built for the best experience.
+                    </p>
+                    <div class="flex items-center justify-center md:justify-start gap-2 text-gray-500 text-xs mb-4">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>Location: Srilanka,colombo</span>
+                    </div>
+                </div>
+
+                <!-- Logo Center -->
+                <div class="flex flex-col items-center justify-center order-first md:order-none">
+                    <div class="scroll-animate-zoom">
+                        <img 
+                            src="https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736" 
+                            alt="SKYLINELogo" 
+                            class="w-24 h-24 md:w-32 md:h-32 object-contain group-hover:opacity-80 transition-opacity"
+                        />
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="text-center md:text-right scroll-animate-right">
+                    <h3 class="text-lg md:text-xl font-bold mb-4">+94711111111</h3>
+                    <p class="text-gray-400 text-xs md:text-sm mb-2 flex items-center justify-center md:justify-end gap-2">
+                        info@skylineroleplay.site
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </p>
+                    <!-- Additional Brand Logos -->
+                    <div class="mt-6 md:mt-8 hidden md:flex justify-end gap-6">
+                        <!-- Team Y Logo -->
+                        <div class="h-16 w-16 flex items-center justify-center scroll-animate-zoom delay-100">
+                            <img src="https://media.discordapp.net/attachments/1442517496275009597/1454131266441183352/10.gif?ex=694ff8c6&is=694ea746&hm=af7f8d468e52a48dcd6be02390e73f6f32239a95415961c0d2a4a08791689b3c&=&width=736&height=736" alt="Team Y Logo" class="h-full w-full object-contain">
+                        </div>
+
+                        <!-- Gaming Controller Logo -->
+                        <div class="h-16 w-16 flex items-center justify-center scroll-animate-zoom delay-200">
+                            <img src="https://media.discordapp.net/attachments/1396159510845849623/1454309465070243961/Gemini_Generated_Image_giauqgiauqgiauqg_1.png?ex=69509ebc&is=694f4d3c&hm=fb39a51a68b84fcfb69f026a3d84e20ac6cd1c0c138f15b9d3a2081aca1dec86&=&format=webp&quality=lossless&width=384&height=385" alt="Gaming Controller" class="h-full w-full object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 md:mt-16 border-t border-gray-900 pt-6 md:pt-8 text-center text-xs text-gray-600 scroll-animate">
+                <p>© 2024. All rights reserved by Skyline Roleplay | Skyline Dev Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navigation and Interaction -->
+<script>
+    // Webhook URLs - Separate URLs for different applications
+    const POLICE_MEDICAL_WEBHOOK = 'https://discord.com/api/webhooks/1454151763790925854/DRpH_244s8_wG67joIWIoxQTaHMvY_iwOkHaEEN0u2K1X_jwa6naMAq-JyigJdp2KzK5';
+    const CREW_WEBHOOK = 'https://discord.com/api/webhooks/1454152178993205278/Brs_mmI0mFyVmJSlh_C11C6wKCeZDgSwcHiwznZbDdpbYoeo0mmeU2zAtIofwUIoSe26';
+
+    // State
+    let currentPage = 'home';
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.getElementById('navbar');
+
+    // Navigation Function
+    function navigateTo(pageId) {
+        // Hide all page sections
+        document.querySelectorAll('.page-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Show the selected page
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.classList.add('active');
+            currentPage = pageId;
+            
+            // Update URL hash without reloading
+            window.history.pushState(null, null, `#${pageId}`);
+            
+            // Update active nav link
+            updateActiveNavLink(pageId);
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Initialize animations for the new page
+            setTimeout(initScrollAnimations, 100);
+        }
+    }
+
+    // Update active nav link
+    function updateActiveNavLink(pageId) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('text-blue-400');
+            link.classList.add('text-gray-300');
+            if (link.getAttribute('data-page') === pageId) {
+                link.classList.remove('text-gray-300');
+                link.classList.add('text-blue-400');
+            }
+        });
+    }
+
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+        if (!mobileMenu.classList.contains('hidden')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (event) => {
+        const isMobileMenuBtn = event.target.closest('#mobile-menu-btn');
+        const isMobileMenu = event.target.closest('#mobile-menu');
+        
+        if (!isMobileMenuBtn && !isMobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Handle mobile menu clicks
+    document.querySelectorAll('#mobile-menu button').forEach(button => {
+        button.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // --- Form Submission Functions ---
+    function showMessage(type, text) {
+        // Remove existing messages
+        document.querySelectorAll('.message').forEach(msg => msg.remove());
+        
+        // Create new message
+        const message = document.createElement('div');
+        message.className = `message ${type}-message`;
+        message.innerHTML = `
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                ${type === 'success' ? 
+                    '<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>' :
+                    '<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>'
+                }
+            </svg>
+            ${text}
+        `;
+        
+        document.body.appendChild(message);
+        
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+            message.remove();
+        }, 3000);
+    }
+
+    // Function to send data to Discord webhook with beautiful formatted embeds
+    async function sendToDiscord(data, applicationType, logoBase64 = null) {
+        try {
+            const timestamp = new Date().toISOString();
+            let embed;
+            let webhookUrl;
+            
+            if (applicationType === 'Police' || applicationType === 'Medical') {
+                webhookUrl = POLICE_MEDICAL_WEBHOOK;
+                embed = {
+                    title: applicationType === 'Police' ? '👮 **Police Application Received**' : '🏥 **Medical Application Received**',
+                    color: applicationType === 'Police' ? 0x3498db : 0xe74c3c,
+                    thumbnail: {
+                        url: applicationType === 'Police' ? 
+                            'https://media.discordapp.net/attachments/1442517496275009597/1454130914362654792/Gray_Cute_Patrol_Car_illustration_Logo.png?ex=694ff872&is=694ea6f2&hm=387ad5ace38a689e0919e35c0b01fc01e8f1e1f40d7d587c5fb704588c4f2031&=&format=webp&quality=lossless&width=682&height=682' :
+                            'https://media.discordapp.net/attachments/1442517496275009597/1454153021113237666/Gray_Cute_Patrol_Car_illustration_Logo.png?ex=69500d09&is=694ebb89&hm=e78c236758aade1c649b38db03befa8115f35d814b8022bfabd8b1fc756372dc&=&format=webp&quality=lossless&width=850&height=850'
+                    },
+                    fields: applicationType === 'Police' ? [
+                        {
+                            name: '👤 **Character Name**',
+                            value: `\`\`\`${data.full_name || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '⚧️ **Gender**',
+                            value: `\`\`\`${data.gender || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '🎂 **Age**',
+                            value: `\`\`\`${data.age || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '🆔 **Discord ID**',
+                            value: `\`\`\`${data.discord_id || 'N/A'}\`\`\``,
+                            inline: false
+                        },
+                        {
+                            name: '❓ **Why Join Police?**',
+                            value: `\`\`\`${data.why_join || 'N/A'}\`\`\``,
+                            inline: false
+                        }
+                    ] : [
+                        {
+                            name: '👤 **Character Name**',
+                            value: `\`\`\`${data.full_name || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '🎂 **Age**',
+                            value: `\`\`\`${data.age || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '🆔 **Discord ID**',
+                            value: `\`\`\`${data.discord_id || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '🏥 **Preferred Division**',
+                            value: `\`\`\`${data.preferred_division || 'N/A'}\`\`\``,
+                            inline: true
+                        }
+                    ],
+                    footer: {
+                        text: 'Skyline Roleplay | POPA Developments 😋',
+                        icon_url: 'https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736'
+                    },
+                    timestamp: timestamp
+                };
+            } else if (applicationType === 'Crew') {
+                webhookUrl = CREW_WEBHOOK;
+                
+                // Parse member names into list format
+                let memberList = '';
+                if (data.member_names) {
+                    const members = data.member_names.split('\n').map(m => m.trim()).filter(m => m);
+                    memberList = members.map(m => `• ${m}`).join('\n');
+                }
+                
+                embed = {
+                    title: '👥 **Crew Application Received**',
+                    color: 0xe67e22,
+                    fields: [
+                        {
+                            name: '🏷️ **Crew Name**',
+                            value: `\`\`\`${data.crew_name || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '👑 **Leader Discord**',
+                            value: `\`\`\`${data.leader_discord || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '👥 **Crew Type**',
+                            value: `\`\`\`${data.crew_type || 'N/A'}\`\`\``,
+                            inline: true
+                        },
+                        {
+                            name: '📜 **Crew Members**',
+                            value: `\`\`\`${memberList || data.member_names || 'N/A'}\`\`\``,
+                            inline: false
+                        },
+                        {
+                            name: '📖 **Crew Story/Background**',
+                            value: `\`\`\`${data.crew_story || 'N/A'}\`\`\``,
+                            inline: false
+                        },
+                        {
+                            name: '✅ **Agrees to Rules**',
+                            value: `\`\`\`${data.agrees_rules === '1' ? 'Yes' : 'No'}\`\`\``,
+                            inline: true
+                        }
+                    ],
+                    footer: {
+                        text: 'Skyline Roleplay | POPA Developments 😋',
+                        icon_url: 'https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736'
+                    },
+                    timestamp: timestamp
+                };
+                
+                // If logo exists, add it as an attachment
+                if (logoBase64) {
+                    // Create a separate message for the logo
+                    const logoMessage = {
+                        embeds: [{
+                            title: "📸 **Crew Logo**",
+                            color: 0xe67e22,
+                            image: { url: "attachment://logo.png" }
+                        }],
+                        username: `SKYLINE ${applicationType} Applications`,
+                        avatar_url: 'https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736'
+                    };
+                    
+                    // First send the main application data
+                    const response1 = await fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            embeds: [embed],
+                            username: `SKYLINE ${applicationType} Applications`,
+                            avatar_url: 'https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736'
+                        })
+                    });
+                    
+                    if (!response1.ok) {
+                        console.error('Failed to send main application:', response1.statusText);
+                        return false;
+                    }
+                    
+                    // Then send the logo as a separate message
+                    // Convert base64 to blob
+                    const base64Data = logoBase64.split(',')[1];
+                    const byteCharacters = atob(base64Data);
+                    const byteNumbers = new Array(byteCharacters.length);
+                    for (let i = 0; i < byteCharacters.length; i++) {
+                        byteNumbers[i] = byteCharacters.charCodeAt(i);
+                    }
+                    const byteArray = new Uint8Array(byteNumbers);
+                    const blob = new Blob([byteArray], { type: 'image/png' });
+                    
+                    const formData = new FormData();
+                    formData.append('payload_json', JSON.stringify(logoMessage));
+                    formData.append('file', blob, 'logo.png');
+                    
+                    const response2 = await fetch(webhookUrl, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    return response2.ok;
+                }
+            }
+
+            // Common fields for all embeds
+            embed.fields.push(
+                {
+                    name: '📱 **Submitted Via**',
+                    value: '```Website Application Form```',
+                    inline: true
+                },
+                {
+                    name: '🕐 **Submission Time**',
+                    value: `\`\`\`${new Date().toLocaleString('en-US', { 
+                        timeZone: 'Asia/Colombo',
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: true 
+                    })}\`\`\``,
+                    inline: true
+                }
+            );
+
+            // Send the main embed
+            const payload = {
+                embeds: [embed],
+                username: `SKYLINE ${applicationType} Applications`,
+                avatar_url: 'https://media.discordapp.net/attachments/1442517496275009597/1454131605403603155/SOUTH_4.png?ex=694ff917&is=694ea797&hm=e8459d187eb5bd77483f55660fc4bac2bc89384c8993f677c01d18a37f4df799&=&format=webp&quality=lossless&width=736&height=736'
+            };
+
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            return response.ok;
+        } catch (error) {
+            console.error('Error sending to Discord:', error);
+            return false;
+        }
+    }
+
+    // Form submission handlers
+    document.addEventListener('DOMContentLoaded', function() {
+        // Police form
+        const policeForm = document.getElementById('police-form');
+        if (policeForm) {
+            policeForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                await submitPoliceForm();
+            });
+        }
+
+        // Medical form
+        const medicalForm = document.getElementById('medical-form');
+        if (medicalForm) {
+            medicalForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                await submitMedicalForm();
+            });
+        }
+
+        // Crew form
+        const crewForm = document.getElementById('crewApplicationForm');
+        if (crewForm) {
+            crewForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                await submitCrewForm();
+            });
+        }
+    });
+
+    async function submitPoliceForm() {
+        const form = document.getElementById('police-form');
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        // Show loading
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.innerHTML = '<span class="spinner"></span>Submitting...';
+        submitBtn.disabled = true;
+
+        try {
+            const success = await sendToDiscord(data, 'Police');
+            
+            if (success) {
+                showMessage('success', 'Police department application submitted successfully!');
+                form.reset();
+            } else {
+                showMessage('error', 'Failed to submit application. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('error', 'An error occurred. Please try again.');
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    }
+
+    async function submitMedicalForm() {
+        const form = document.getElementById('medical-form');
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        // Show loading
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.innerHTML = '<span class="spinner"></span>Submitting...';
+        submitBtn.disabled = true;
+
+        try {
+            const success = await sendToDiscord(data, 'Medical');
+            
+            if (success) {
+                showMessage('success', 'Medical department application submitted successfully!');
+                form.reset();
+            } else {
+                showMessage('error', 'Failed to submit application. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('error', 'An error occurred. Please try again.');
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    }
+
+    // FIXED Crew Form Submission with Logo
+    async function submitCrewForm() {
+        const form = document.getElementById('crewApplicationForm');
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        // Collect form data
+        const formData = {
+            crew_name: form.querySelector('input[name="crew_name"]').value,
+            leader_discord: form.querySelector('input[name="leader_discord"]').value,
+            member_names: form.querySelector('textarea[name="member_names"]').value,
+            crew_type: form.querySelector('input[name="crew_type"]').value,
+            crew_story: form.querySelector('textarea[name="crew_story"]').value,
+            agrees_rules: form.querySelector('input[name="agrees_rules"]').checked ? '1' : '0'
+        };
+
+        // Check file size if a file is selected
+        const fileInput = document.getElementById('crew_logo');
+        let logoBase64 = null;
+
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            const fileSize = file.size / 1024 / 1024; // in MB
+            
+            // File size validation
+            if (fileSize > 5) {
+                showMessage('error', 'File size must be less than 5MB');
+                return;
+            }
+
+            // Check file type
+            const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            if (!validTypes.includes(file.type)) {
+                showMessage('error', 'Invalid file type. Please use JPG, PNG, GIF, or WEBP.');
+                fileInput.value = '';
+                return;
+            }
+
+            // Convert file to base64 with proper error handling
+            try {
+                logoBase64 = await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        if (e.target.result && e.target.result.startsWith('data:image/')) {
+                            resolve(e.target.result);
+                        } else {
+                            reject('Invalid image file');
+                        }
+                    };
+                    reader.onerror = () => reject('Error reading file');
+                    reader.readAsDataURL(file);
+                });
+            } catch (error) {
+                console.error('Error converting file:', error);
+                showMessage('error', 'Error processing image file.');
+                return;
+            }
+        }
+
+        // Show loading
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.innerHTML = '<span class="spinner"></span>Submitting...';
+        submitBtn.disabled = true;
+
+        try {
+            const success = await sendToDiscord(formData, 'Crew', logoBase64);
+            
+            if (success) {
+                showMessage('success', 'Crew registration submitted successfully!');
+                form.reset();
+                // Reset preview
+                document.getElementById('logoPreview').innerHTML = `
+                    <div class="text-gray-500 text-center">
+                        <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-xs">Logo Preview</p>
+                    </div>
+                `;
+                fileInput.value = '';
+            } else {
+                showMessage('error', 'Failed to submit application. Please try again.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            showMessage('error', 'An error occurred. Please try again.');
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    }
+
+    // --- Logo Preview Function ---
+    function previewLogo(event) {
+        const input = event.target;
+        const preview = document.getElementById('logoPreview');
+        
+        if (input.files && input.files[0]) {
+            const file = input.files[0];
+            const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            
+            if (!validTypes.includes(file.type)) {
+                showMessage('error', 'Invalid file type. Please select an image file (JPG, PNG, GIF, WEBP).');
+                input.value = '';
+                return;
+            }
+            
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                preview.innerHTML = `<img src="${e.target.result}" alt="Logo Preview" class="w-full h-full object-contain">`;
+            }
+            
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // --- Tab Switching Logic for Rules Page ---
+    function setupRulesTabs() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-tab');
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                button.classList.add('active');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+                
+                animateRuleItems();
+            });
+        });
+    }
+
+    // --- Scroll Animation Functions ---
+    function initScrollAnimations() {
+        animateElements();
+        
+        if (currentPage === 'serverrules') {
+            animateRuleItems();
+        }
+    }
+
+    function animateElements() {
+        const animatedElements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-zoom');
+        
+        animatedElements.forEach((element, index) => {
+            const delay = element.classList.contains('delay-100') ? 100 :
+                         element.classList.contains('delay-200') ? 200 :
+                         element.classList.contains('delay-300') ? 300 :
+                         element.classList.contains('delay-400') ? 400 :
+                         element.classList.contains('delay-500') ? 500 :
+                         element.classList.contains('delay-600') ? 600 :
+                         element.classList.contains('delay-700') ? 700 : 0;
+            
+            setTimeout(() => {
+                element.classList.add('active');
+            }, delay);
+        });
+    }
+
+    function animateRuleItems() {
+        const ruleItems = document.querySelectorAll('.rule-item');
+        
+        ruleItems.forEach((item, index) => {
+            item.classList.remove('animated');
+            
+            setTimeout(() => {
+                item.classList.add('animated');
+            }, index * 100);
+        });
+    }
+
+    // --- Intersection Observer for scroll animations ---
+    function setupScrollObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    if (entry.target.classList.contains('rule-item')) {
+                        entry.target.classList.add('animated');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-zoom, .rule-item').forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    // Handle hash-based navigation
+    function handleHashNavigation() {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) {
+            navigateTo(hash);
+        }
+    }
+
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        setupRulesTabs();
+        setupScrollObserver();
+        initScrollAnimations();
+        handleHashNavigation();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', handleHashNavigation);
+    });
+    
+    // Disable right-click and developer tools
+    document.addEventListener("contextmenu", e => e.preventDefault());
+
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) {
+            alert("Developer tools are disabled!");
+            return false;
+        }
+    };
+</script>
+</body>
+</html>
